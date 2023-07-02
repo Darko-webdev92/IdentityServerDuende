@@ -72,7 +72,7 @@ public static class Config
             new Client
             {
                 ClientId = "mvc",
-                ClientSecrets = { new Secret("secret".Sha256()) },
+                ClientSecrets = { new Secret("secret1".Sha256()) },
 
                 AllowedGrantTypes = GrantTypes.Code,
             
