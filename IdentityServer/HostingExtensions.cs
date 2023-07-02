@@ -54,8 +54,8 @@ internal static class HostingExtensions
             app.UseDeveloperExceptionPage();
         }
 
-        // Call this only when you modify Config.cs file
-        //InitializeDatabase(app);
+        // Call this only when you modify Config.cs file and when you start the application for the first time
+        InitializeDatabase(app);
 
 
         // uncomment if you want to add a UI
