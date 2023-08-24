@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Authentication
 
+@if(User.Identity.IsAuthenticated){
+
 <h2>Claims</h2>
 
 <dl>
@@ -19,3 +21,7 @@
         <dd>@prop.Value</dd>
     }
 </dl>
+}else{
+<h2>Claims</h2>
+}
+

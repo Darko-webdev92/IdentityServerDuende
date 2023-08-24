@@ -87,6 +87,26 @@ public static class Config
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile
                 }
+            },
+            // Admin
+            new Client
+            {
+                ClientId = "admin",
+                ClientSecrets = { new Secret("secret1".Sha256()) },
+
+                AllowedGrantTypes = GrantTypes.Code,
+            
+                // where to redirect to after login
+                RedirectUris = { "https://localhost:5004/signin-oidc" },
+
+                // where to redirect to after logout
+                PostLogoutRedirectUris = { "https://localhost:5004/signout-callback-oidc" },
+
+                AllowedScopes = new List<string>
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile
+                }
             }
         };
 
